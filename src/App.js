@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react"; // hooks
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import {useEffect, useState} from "react"; // hooks
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
@@ -13,10 +13,9 @@ import About from "./components/About";
 
 const App = () => {
     const [showAddTask, setShowAddTask] = useState(false)
-    const [tasks, setTasks] = useState([ // initial state, change would be made with 'setTasks()'
+    const [tasks, setTasks] = useState([]) // initial state, change would be made with 'setTasks()'
 
-    ])
-    useEffect(() => {
+    useEffect(() => { // is run instantly when the site is loaded
         const getTasks = async () => {
             const tasksFromServer = await fetchTasks()
             setTasks(tasksFromServer)
@@ -35,9 +34,7 @@ const App = () => {
 
     const fetchTask = async (id) => {
         const res = await fetch(`http://localhost:5000/tasks/${id}`)
-        const data = await res.json()
-
-        return data
+        return await res.json()
     }
 
     // Add Task
