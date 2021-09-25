@@ -19,7 +19,7 @@ const Header = ({ title, onAdd, showForm }) => {
 }
 
 Header.defaultProps = {
-    title: 'Task Tracker'
+    title: 'Task Tracker (by Manuel)'
 }
 
 Header.probTypes = {
