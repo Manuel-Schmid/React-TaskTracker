@@ -20,6 +20,10 @@ body {
   border-radius: 5px;
 }
 
+.extern {
+  border: 2px solid red;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
