@@ -98,7 +98,7 @@ const App = () => {
                         { showAddTask && <AddTask onAdd={addTask}/> } {/*short way of writing ternary without an 'else'*/}
                         { (tasks.length > 0)
                             ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/> // if there is more than 0 tasks show the Task-list
-                            : 'No Tasks To Show' // else show nothing
+                            : 'No Tasks To Show' // otherwise show nothing
                         }
                     </>
                 )}/>
