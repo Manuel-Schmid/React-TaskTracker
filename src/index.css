@@ -126,3 +126,8 @@ footer {
 .blue-text {
   color: #0404f3;
 }
+
+.box-shadow {
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+}
