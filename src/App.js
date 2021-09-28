@@ -81,7 +81,7 @@ const App = () => {
         const data = await res.json()
 
         setTasks(
-            tasks.map((task) =>
+            tasks.map((task) => // mapping over tasks
             task.id === id
                 ? { ...task, reminder: data.reminder } // returns the same task as before but changes the reminder to the opposite
                 : task // returns the normal task
